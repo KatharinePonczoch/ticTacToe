@@ -1,7 +1,7 @@
 //global variables
-var player = "Player 1";
-var player1Score = 0;
-var player2Score = 0;
+let player = "Player 1";
+let player1Score = 0;
+let player2Score = 0;
 
 function playAgain() {
   for (let i = 1; i < 10; i++) {
@@ -22,6 +22,11 @@ function toggleButtonVisible() {
   var showButton = document.getElementById("playAgainButton");
   showButton.classList.remove("hidden");
 }
+function catsgame() {
+  toggleButtonVisible();
+  document.getElementById("message").innerText =
+    "Cat's game! No winner, try again.";
+}
 function checkWinner() {
   const square1 = document.getElementById("1").innerHTML;
   const square2 = document.getElementById("2").innerHTML;
@@ -38,9 +43,11 @@ function checkWinner() {
     ).innerText = `Player ${square1} is the Winner!`;
     if (square1 === "X") {
       player1Score = player1Score + 1;
+      player = "";
       toggleButtonVisible();
     } else if (square1 === "O") {
       player2Score = player2Score + 1;
+      player = "";
       toggleButtonVisible();
     }
     score();
@@ -50,9 +57,11 @@ function checkWinner() {
     ).innerText = `Player ${square1} is the Winner!`;
     if (square1 === "X") {
       player1Score = player1Score + 1;
+      player = "";
       toggleButtonVisible();
     } else if (square1 === "O") {
       player2Score = player2Score + 1;
+      player = "";
       toggleButtonVisible();
     }
     score();
@@ -62,9 +71,11 @@ function checkWinner() {
     ).innerText = `Player ${square4} is the Winner!`;
     if (square4 === "X") {
       player1Score = player1Score + 1;
+      player = "";
       toggleButtonVisible();
     } else if (square4 === "O") {
       player2Score = player2Score + 1;
+      player = "";
       toggleButtonVisible();
     }
     score();
@@ -74,9 +85,11 @@ function checkWinner() {
     ).innerText = `Player ${square7} is the Winner!`;
     if (square7 === "X") {
       player1Score = player1Score + 1;
+      player = "";
       toggleButtonVisible();
     } else if (square7 === "O") {
       player2Score = player2Score + 1;
+      player = "";
       toggleButtonVisible();
     }
     score();
@@ -86,9 +99,11 @@ function checkWinner() {
     ).innerText = `Player ${square3} is the Winner!`;
     if (square3 === "X") {
       player1Score = player1Score + 1;
+      player = "";
       toggleButtonVisible();
     } else if (square3 === "O") {
       player2Score = player2Score + 1;
+      player = "";
       toggleButtonVisible();
     }
     score();
@@ -98,9 +113,11 @@ function checkWinner() {
     ).innerText = `Player ${square3} is the Winner!`;
     if (square3 === "X") {
       player1Score = player1Score + 1;
+      player = "";
       toggleButtonVisible();
     } else if (square3 === "O") {
       player2Score = player2Score + 1;
+      player = "";
       toggleButtonVisible();
     }
     score();
@@ -110,9 +127,11 @@ function checkWinner() {
     ).innerText = `Player ${square2} is the Winner!`;
     if (square2 === "X") {
       player1Score = player1Score + 1;
+      player = "";
       toggleButtonVisible();
     } else if (square2 === "O") {
       player2Score = player2Score + 1;
+      player = "";
       toggleButtonVisible();
     }
     score();
@@ -122,12 +141,26 @@ function checkWinner() {
     ).innerText = `Player ${square1} is the Winner!`;
     if (square1 === "X") {
       player1Score = player1Score + 1;
+      player = "";
       toggleButtonVisible();
     } else if (square1 === "O") {
       player2Score = player2Score + 1;
+      player = "";
       toggleButtonVisible();
     }
     score();
+  } else if (
+    square1.length &&
+    square2.length &&
+    square3.length &&
+    square4.length &&
+    square5.length &&
+    square6.length &&
+    square7.length &&
+    square8.length &&
+    square9.length
+  ) {
+    catsgame();
   } else {
     console.log("no winner yet");
   }
