@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="./resources/style.css">
+  
+  </head>
+  <body>
+    <header>
+        <div class="center">
+            <h2 id="message"> Player 1 is Xs <br> Player 2 is 0s</h2>
+            <button id="playButton" onclick="playGame()"><strong>Play!</strong></button>
+            <button class="hidden" id="playAgainButton" onclick="playAgain()"><strong>Play Again!</strong></button>         
+        </div>
+    </header>
+    <main>
+        <section id="game-box" class="center">
+            <div class="square" onclick="playerChoice('1')">
+                <h1 id="1"></h1>
+            </div>
+            <div class="square" onclick="playerChoice('2')">
+                <h1 id="2"></h1>
+            </div>
+            <div class="square" onclick="playerChoice('3')">
+                <h1 id="3"></h1>
+            </div>
+            <div class="square" onclick="playerChoice('4')">
+                <h1 id="4"></h1>
+            </div>
+            <div class="square" onclick="playerChoice('5')">
+                <h1 id="5"></h1>
+            </div>
+            <div class="square" onclick="playerChoice('6')">
+                <h1 id="6"></h1>
+            </div>
+            <div class="square" onclick="playerChoice('7')">
+                <h1 id="7"></h1>
+            </div>
+            <div class="square" onclick="playerChoice('8')">
+                <h1 id="8"></h1>
+            </div>
+            <div class="square" onclick="playerChoice('9')">
+                <h1 id="9"></h1>
+            </div>
+        </section> 
+        <section>
+            <h3 class="center">score</h3>
+            <div id="score-box" class="center"> 
+                <div class=player id="player 1">
+                    <h6>Player 1 (X)</h6>  
+                    <h1 id="player1Score"></h1>
+                </div>
+                <div class=player id="player 2">
+                    <h6>Player 2 (O)</h6> 
+                    <h1 id="player2Score"></h1>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./resources/script.js"></script>
+  </body>
+</html>
